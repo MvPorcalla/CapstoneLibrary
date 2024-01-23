@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <?php include('include/favicon.php'); ?> <!-- favicon  -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>BUCapstone Hub Login</title>
+
+    <style>
+        @media (max-width: 768px) {
+            .login-form-card {
+            height: auto;
+            }
+
+            .left-display,
+            .right-display {
+                width: 100%;
+            }
+
+            .left-display img {
+                display: none;
+            }
+
+            .right-display {
+                margin-top: 20px;
+            }
+
+            .form-input {
+                padding: 15px;
+            }
+
+            .m-5.bg form {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <div class="body-container">
+            <div class="login-form-card">
+                <div class="row">
+                    <div class="left-display col-md-6 text-center mt-3">
+                        <h1>BU Capstone Hub</h1>
+                        <div class="mt-3">
+                            <img src="assets\images\booksfreepiks.png" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="right-display col-md-6 mt-3">
+                        <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
+                            <div class="pulse">
+                                <img class="circle-logo" src="assets\images\buplogo.png" alt="logo">
+                            </div>
+                        </div>
+
+                        <div class="form-input m-5 bg">
+                            <form action="process_registration.php" method="post">
+
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Student number</label>
+                                    <input type="text" class="form-control" id="username" name="username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <div class="d-flex justify-content-between mt-3 mb-4">
+                                    <div class="form-check form-check-primary">
+                                        <input class="form-check-input" type="checkbox" value="1" id="rememberMefor7days" name="rememberMefor7days">
+                                        <label class="form-check-label" for="rememberMefor7days">Remember me</label>
+                                    </div>
+                                    <a href="#">Forgot Password?</a>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-info d-grid w-100 text-white">Login</button>
+
+                                <!-- Centered Footer -->
+                                <div class="footer text-center mt-5">
+                                    <p>&copy; 2024 Built by BUP students.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- use nonce for Content Security Policy -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
